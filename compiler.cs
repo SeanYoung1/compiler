@@ -14,3 +14,6 @@ HashSet<string> operators = new HashSet<string> { "+", "-", "*", "/", "$", "=", 
                                                   "++", "--", "&", "|", "~", "^", "<<", ">>", "??", "?", "is", "as", "typeof" }; 
 // C# seperators
 HashSet<string> seperators = new HashSet<string> { "(", ")", "{", "}", "[", "]", ";", ",", ".", ":", "::", "?", "=>"};
+
+// C# identifiers
+HashSet<string> identifiers = new HashSet<string> { "a", "b", "main" };
