@@ -1,0 +1,17 @@
+Set of lexemes and tokens (<lexemes> = <tokens>)
+“
+“If” = keyword
+“(“ = separator
+“a” = identifier
+“>” = operator
+“=” = operator
+“b” = identifier
+“)” = separator
+“{“ = separator
+“return” = keyword
+“0” = integer
+“;” = separator
+“}” = separator
+“
+➢ You can use regular expressions from external resources for identification of lexemes.
+➢ Your code should remove unnecessary items like white spaces and comment lines.
