@@ -6,24 +6,26 @@ using System.Collections.Generic;
 namespace LexicalAnalyzer {
   class Program {
     // Token Definition
+    // All keywords are put into this hashset
     static HashSet<string> keywords = new HashSet<string> {
         "if", "else", "while", "for", "return", "int", "void", "string", "float", "double", "bool"
     };
-
+    // All operators are put into this hashset
     static HashSet<string> operators = new HashSet<string> {
       "+", "-", "*", "/", "=", "==", "!=", "<", ">", ",", "<=", ">=", "&&", "||", "!"  
     };
-
+  // All separators are put into this hashset.
     static HashSet<string> separators = new HashSet<string> {
       "(", ")", "{", "}", "[", "]", ";", ","
     };
     // Comment Removal
-    static string RemoveComments(string sean) {
-          sean = Regex.Replace(sean, @"//.*", "");
-          sean = Regex.Replace(sean, @"/\*.*?\*/", "", RegexOptions.Singleline);
-          return sean;
+    // This function removes comments to only contain the code
+    static string RemoveComments(string input) {
+          input = Regex.Replace(input, @"//.*", "");
+          input = Regex.Replace(input, @"/\*.*?\*/", "", RegexOptions.Singleline);
+          return input;
         }
-
+//This function turns everything inside the input into separated tokens.
     static List<string> Tokenize(string input) {
           List<string> tokens = new List<string>();
 
@@ -39,6 +41,7 @@ namespace LexicalAnalyzer {
             
         }
     // Classification
+    // This function checks the lexeme to identify its kind of token
     static string ClassifyToken(string lexeme) {
       if (keywords.Contains(lexeme))
         return "keyword";
@@ -49,8 +52,8 @@ namespace LexicalAnalyzer {
       else if (separators.Contains(lexeme))
         return "separators";
       
-      else if (Regex.IsMatch(lexeme, @"^\d+$"))
-        return "integer";
+      else if (Regex.IsMatch(lexeme, @"^\d+(\.\d+)?$") || Regex.IsMatch(lexeme, "^\".*\"$") || lexeme == "true" || lexeme == "false")
+        return "literals";
       
       else if (Regex.IsMatch(lexeme, @"^[a-zA-Z_]\w*$"))
         return "identifier";
@@ -59,7 +62,8 @@ namespace LexicalAnalyzer {
         return "unknown";
     }    
 
-    // main function
+    // Main function
+    // The main function takes in the input.txt, removes all comments, and then turns it into tokens. It then identifies which tokens it is.
     static void Main(string[] args)
         {
             string input = File.ReadAllText("input.txt");

@@ -1,0 +1,9 @@
+int age = 67;
+string name = Wilson;
+bool isStudent = false;
+
+if (age > 18) {
+    name = "Adult"
+} else {
+    name = "Minor"
+}

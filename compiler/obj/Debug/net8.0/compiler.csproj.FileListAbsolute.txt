@@ -1,0 +1,15 @@
+/workspaces/compiler/compiler/bin/Debug/net8.0/compiler
+/workspaces/compiler/compiler/bin/Debug/net8.0/compiler.deps.json
+/workspaces/compiler/compiler/bin/Debug/net8.0/compiler.runtimeconfig.json
+/workspaces/compiler/compiler/bin/Debug/net8.0/compiler.dll
+/workspaces/compiler/compiler/bin/Debug/net8.0/compiler.pdb
+/workspaces/compiler/compiler/obj/Debug/net8.0/compiler.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/compiler/compiler/obj/Debug/net8.0/compiler.AssemblyInfoInputs.cache
+/workspaces/compiler/compiler/obj/Debug/net8.0/compiler.AssemblyInfo.cs
+/workspaces/compiler/compiler/obj/Debug/net8.0/compiler.csproj.CoreCompileInputs.cache
+/workspaces/compiler/compiler/obj/Debug/net8.0/compiler.sourcelink.json
+/workspaces/compiler/compiler/obj/Debug/net8.0/compiler.dll
+/workspaces/compiler/compiler/obj/Debug/net8.0/refint/compiler.dll
+/workspaces/compiler/compiler/obj/Debug/net8.0/compiler.pdb
+/workspaces/compiler/compiler/obj/Debug/net8.0/compiler.genruntimeconfig.cache
+/workspaces/compiler/compiler/obj/Debug/net8.0/ref/compiler.dll
