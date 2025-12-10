@@ -1,0 +1,19 @@
+Lexical Analyzer Report
+The code functionality of our lexical analyzer first defines what the keywords, operators, and separators are. This way, when tokenizing,
+it could match the tokens to our definitions and label them as such. Next, in the code are three functions. One function’s job was to remove
+all comments, and the other function’s job was to turn everything into lexemes. The last function’s job was to turn all the lexemes given by
+the previous function and turn it into a classified token. Next, in our main function, the input.txt is given and put through our three
+functions. The code then prints in the <Lexeme> = <Token> format.
+Before tokenization, the program must first remove any comments that are not part of the executable logic. The RemoveComments function does
+  that by using regular expressions that remove single-line comments and multi-line comments from the source code. We must remove the comments 
+first, as they can be misinterpreted as tokens if not removed beforehand. After cleaning the source code, the analyzer ensures only meaningful 
+code is processed, making sure the lexical analysis is accurate and working correctly. Now the tokenization of the source code is handled by 
+the Tokenize function. The function scans the cleaned input and breaks the code into individual lexemes. Lexemes are sequences of characters 
+in the source code that represent meaningful elements such as tokens. The string pattern uses regular expressions to capture identifiers, numeric 
+literals, string literals, boolean literals, operators, and separators. Each match found in the input is added to a list of tokens representing a 
+sequence of elements in the code. After that, ClassifyToken is called to determine the type of each token. It first uses if statements to check if 
+it’s one of the predefined sets of keywords, operators, or separators. If not, it then checks if the lexeme represents an integer, a float, a 
+string literal, or a boolean literal. The tokens that match none of the categories above are considered identifiers, and if the token doesn’t
+match identifiers, it would be unknown. The time complexity of this code should be O(n), because it is determined by the length of the input code. 
+Every character is looked through with the functions, and there are no nested loops. The space complexity of this code should also be O(n), because
+the code stores everything from input.txt into a list, and that grows linearly along with the input size. 
